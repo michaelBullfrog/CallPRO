@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BrightSmile Dental | Family & Cosmetic Dentistry</title>
+  <meta name="description" content="BrightSmile Dental offers family, cosmetic, and emergency dentistry with compassionate care. Book online or call today." />
+
+  <!-- Basic social preview -->
+  <meta property="og:title" content="BrightSmile Dental" />
+  <meta property="og:description" content="Family • Cosmetic • Emergency Dentistry. Book online or call today." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: rgba(255,255,255,0.08);
+      --card-2: rgba(255,255,255,0.06);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --line: rgba(255,255,255,0.14);
+      --accent: #44d7c6;
+      --accent-2:#5ea7ff;
+      --shadow: 0 12px 40px rgba(0,0,0,0.35);
+      --radius: 18px;
+      --max: 1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 10% 10%, rgba(94,167,255,0.28), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(68,215,198,0.25), transparent 60%),
+        radial-gradient(900px 600px at 50% 110%, rgba(255,255,255,0.10), transparent 60%),
+        var(--bg);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(11,18,32,0.85), rgba(11,18,32,0.55));
+      border-bottom: 1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; text-decoration:none;
+      font-weight:700; letter-spacing:0.2px;
+    }
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 10px 26px rgba(68,215,198,0.25);
+      display:grid; place-items:center;
+    }
+    .logo svg{opacity:0.92}
+    .navlinks{
+      display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+    }
+    .navlinks a{
+      text-decoration:none;
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+      padding:8px 10px;
+      border-radius:999px;
+      transition: all .2s ease;
+    }
+    .navlinks a:hover{
+      color:var(--text);
+      background: rgba(255,255,255,0.06);
+    }
+    .cta{
+      display:flex; gap:10px; align-items:center;
+    }
+    .btn{
+      appearance:none; border:1px solid var(--line); cursor:pointer;
+      background: rgba(255,255,255,0.06);
+      color:var(--text);
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:14px;
+      text-decoration:none;
+      transition: transform .15s ease, background .2s ease, border-color .2s ease;
+      display:inline-flex; gap:10px; align-items:center;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22)}
+    .btn.primary{
+      border: none;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color:#081225;
+      box-shadow: 0 14px 36px rgba(94,167,255,0.18), 0 14px 36px rgba(68,215,198,0.16);
+    }
+    .btn.primary:hover{filter: brightness(1.02)}
+    .hero{
+      padding:54px 0 28px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .card{
+      background: linear-gradient(to bottom right, rgba(255,255,255,0.10), rgba(255,255,255,0.05));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .heroCard{
+      padding:26px;
+      position:relative;
+      min-height: 320px;
+    }
+    .badgeRow{
+      display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px;
+    }
+    .badge{
+      font-size:12px;
+      color: rgba(255,255,255,0.82);
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.06);
+      padding:6px 10px;
+      border-radius:999px;
+      font-weight:700;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height:1.08;
+      letter-spacing:-0.5px;
+    }
+    .lead{
+      margin:0 0 16px;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 62ch;
+    }
+    .heroActions{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top: 18px;
+    }
+    .mini{
+      display:flex; gap:14px; flex-wrap:wrap; margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .mini span{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .heroAside{
+      display:grid;
+      grid-template-rows: 1fr 1fr;
+      gap:18px;
+    }
+    .asideCard{
+      padding:18px;
+      background: linear-gradient(to bottom right, rgba(255,255,255,0.09), rgba(255,255,255,0.05));
+    }
+    .asideCard h3{margin:0 0 8px; font-size:16px}
+    .asideCard p{margin:0; color:var(--muted); font-size:14px}
+    .asideCard .hr{height:1px; background:var(--line); margin:14px 0}
+    .kv{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+      margin-top:10px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .kv b{color:var(--text)}
+    section{padding: 22px 0}
+    .sectionTitle{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      margin: 0 0 12px;
+    }
+    .sectionTitle h2{margin:0; font-size:22px; letter-spacing:-0.2px}
+    .sectionTitle p{margin:0; color:var(--muted); font-size:14px}
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .service{
+      padding:16px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      transition: transform .15s ease, background .2s ease;
+    }
+    .service:hover{transform: translateY(-2px); background: rgba(255,255,255,0.07)}
+    .service h3{margin:0 0 6px; font-size:16px}
+    .service p{margin:0; color:var(--muted); font-size:14px}
+    .twoCol{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .info{
+      padding:18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+    }
+    .info h3{margin:0 0 8px; font-size:16px}
+    .info p, .info li{color:var(--muted); font-size:14px}
+    .info ul{margin:10px 0 0; padding-left:18px}
+    .formWrap{
+      padding:18px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: linear-gradient(to bottom right, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+    }
+    form{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    label{display:block; font-size:12px; color: rgba(255,255,255,0.78); font-weight:700; margin:0 0 6px}
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius: 12px;
+      border:1px solid rgba(255,255,255,0.14);
+      background: rgba(8,12,20,0.55);
+      color: var(--text);
+      outline:none;
+    }
+    textarea{min-height:110px; resize:vertical}
+    input:focus, select:focus, textarea:focus{
+      border-color: rgba(94,167,255,0.55);
+      box-shadow: 0 0 0 4px rgba(94,167,255,0.12);
+    }
+    .full{grid-column: 1 / -1}
+    .fineprint{margin:10px 0 0; color: rgba(255,255,255,0.62); font-size:12px}
+    .footer{
+      margin-top: 26px;
+      padding: 26px 0 32px;
+      border-top: 1px solid var(--line);
+      color: rgba(255,255,255,0.65);
+      font-size: 13px;
+    }
+    .footerGrid{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 14px;
+      align-items:start;
+    }
+    .muted{color:var(--muted)}
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      margin:8px 8px 0 0;
+    }
+    .mobileToggle{
+      display:none;
+    }
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .heroGrid{grid-template-columns: 1fr; }
+      .heroAside{grid-template-rows: auto; grid-template-columns: 1fr; }
+      .grid3{grid-template-columns: 1fr}
+      .twoCol{grid-template-columns: 1fr}
+      form{grid-template-columns: 1fr}
+      .footerGrid{grid-template-columns: 1fr}
+      .navlinks{display:none}
+      .mobileToggle{display:inline-flex}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="BrightSmile Dental Home">
+          <div class="logo" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M7 3c-1 2-1 4 0 6 1 2 1 4 0 6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <path d="M17 3c1 2 1 4 0 6-1 2-1 4 0 6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <path d="M9 21c1-4 1-7 3-7s2 3 3 7" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <path d="M8 9c2 2 6 2 8 0" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span>BrightSmile Dental</span>
+        </a>
+
+        <nav class="navlinks" aria-label="Primary navigation">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#insurance">Insurance</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="cta">
+          <a class="btn mobileToggle" href="#contact">Contact</a>
+          <a class="btn" href="tel:+15551234567" aria-label="Call BrightSmile Dental">
+            📞 <span>Call</span>
+          </a>
+          <a class="btn primary" href="#contact">Book Appointment</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="heroGrid">
+          <div class="card heroCard">
+            <div class="badgeRow">
+              <span class="badge">Family Dentistry</span>
+              <span class="badge">Cosmetic</span>
+              <span class="badge">Emergency Visits</span>
+              <span class="badge">Same-Day Options</span>
+            </div>
+
+            <h1>Modern dentistry. Gentle care. Confident smiles.</h1>
+            <p class="lead">
+              BrightSmile Dental delivers a comfortable, patient-first experience — from cleanings and fillings to
+              veneers and whitening. Have a question? Use the chat widget in the corner any time.
+            </p>
+
+            <div class="heroActions">
+              <a class="btn primary" href="#contact">Request an Appointment</a>
+              <a class="btn" href="#services">Explore Services</a>
+              <a class="btn" href="#insurance">Insurance & Financing</a>
+            </div>
+
+            <div class="mini" aria-label="Practice highlights">
+              <span>🕒 Mon–Fri: 8am–5pm</span>
+              <span>📍 123 Main St, Your City</span>
+              <span>⭐ 4.9 average rating</span>
+            </div>
+          </div>
+
+          <div class="heroAside">
+            <div class="card asideCard">
+              <h3>New patient special</h3>
+              <p>Comprehensive exam + digital X-rays + cleaning (with qualifying insurance).</p>
+              <div class="hr"></div>
+              <div class="kv">
+                <div><b>Call</b><br><span class="muted">(555) 123-4567</span></div>
+                <div><b>Email</b><br><span class="muted">hello@brightsmile.com</span></div>
+              </div>
+            </div>
+
+            <div class="card asideCard">
+              <h3>Emergency dentistry</h3>
+              <p>Tooth pain, broken tooth, swelling, or lost filling? We’ll triage quickly and get you relief.</p>
+              <div class="hr"></div>
+              <a class="btn" href="tel:+15551234567">🚑 Call for urgent care</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="sectionTitle">
+          <h2>Services</h2>
+          <p>Everything you need for lifelong oral health.</p>
+        </div>
+
+        <div class="grid3">
+          <div class="service">
+            <h3>Preventive Care</h3>
+            <p>Cleanings, exams, X-rays, sealants, fluoride — focused on prevention and early detection.</p>
+          </div>
+          <div class="service">
+            <h3>Restorative</h3>
+            <p>Fillings, crowns, bridges, dentures, root canals — rebuild function and comfort.</p>
+          </div>
+          <div class="service">
+            <h3>Cosmetic</h3>
+            <p>Whitening, veneers, bonding, contouring — improve confidence with natural results.</p>
+          </div>
+          <div class="service">
+            <h3>Gum Health</h3>
+            <p>Periodontal evaluation and treatment plans to protect the foundation of your smile.</p>
+          </div>
+          <div class="service">
+            <h3>Kids & Families</h3>
+            <p>Gentle care for children and parents, with a calm environment and clear education.</p>
+          </div>
+          <div class="service">
+            <h3>Emergency Visits</h3>
+            <p>Same-day triage when possible for pain, chips, breaks, swelling, or dental trauma.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="sectionTitle">
+          <h2>About BrightSmile</h2>
+          <p>Care that’s clear, comfortable, and modern.</p>
+        </div>
+
+        <div class="twoCol">
+          <div class="info">
+            <h3>Our approach</h3>
+            <p>
+              We combine modern technology with a calm, human approach. You’ll always know what we recommend,
+              why we recommend it, and what it costs — before we begin.
+            </p>
+            <ul>
+              <li>Transparent treatment plans</li>
+              <li>Comfort-first options available</li>
+              <li>Digital imaging and modern materials</li>
+            </ul>
+          </div>
+
+          <div class="info">
+            <h3>Meet the team</h3>
+            <p>
+              Our clinicians and hygienists focus on patient education and long-term health, not “quick fixes.”
+              We welcome nervous patients and explain every step.
+            </p>
+            <div class="pill">🦷 Dr. Taylor Smith, DDS</div>
+            <div class="pill">🙂 Friendly, judgment-free care</div>
+            <div class="pill">🧼 Preventive-first mindset</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="insurance">
+      <div class="container">
+        <div class="sectionTitle">
+          <h2>Insurance & Financing</h2>
+          <p>We’ll help you understand your options.</p>
+        </div>
+
+        <div class="twoCol">
+          <div class="info">
+            <h3>Accepted insurance</h3>
+            <p>
+              We work with many PPO plans. If you’re unsure, send us your provider and member ID and we’ll verify.
+            </p>
+            <ul>
+              <li>Most major PPO providers</li>
+              <li>Clear estimates before treatment</li>
+              <li>HSA/FSA accepted</li>
+            </ul>
+          </div>
+
+          <div class="info">
+            <h3>Financing options</h3>
+            <p>
+              For larger procedures, we can offer payment plans (where available) to help spread out cost.
+            </p>
+            <ul>
+              <li>Payment plans (subject to approval)</li>
+              <li>Pay-in-full discounts may apply</li>
+              <li>Transparent pricing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="sectionTitle">
+          <h2>Contact & Appointment Request</h2>
+          <p>Send a request below — or use the chat widget any time.</p>
+        </div>
+
+        <div class="twoCol">
+          <div class="formWrap">
+            <h3 style="margin:0 0 6px;">Request an appointment</h3>
+            <p class="muted" style="margin:0;">
+              This form is a front-end template. Hook it to your email/CRM (or a form backend) when ready.
+            </p>
+
+            <form id="apptForm">
+              <div>
+                <label for="name">Full name</label>
+                <input id="name" name="name" placeholder="Jane Doe" required />
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" placeholder="(555) 123-4567" required />
+              </div>
+
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="jane@example.com" />
+              </div>
+              <div>
+                <label for="type">Appointment type</label>
+                <select id="type" name="type">
+                  <option>Cleaning / Exam</option>
+                  <option>Cosmetic Consultation</option>
+                  <option>Tooth Pain / Emergency</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="full">
+                <label for="notes">How can we help?</label>
+                <textarea id="notes" name="notes" placeholder="Tell us what you’re experiencing and preferred days/times."></textarea>
+              </div>
+
+              <div class="full" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+                <button class="btn primary" type="submit">Submit request</button>
+                <a class="btn" href="tel:+15551234567">Call the office</a>
+              </div>
+
+              <p class="fineprint full">
+                If this is a medical emergency, call 911. For urgent dental issues, call the office.
+                Do not submit sensitive personal information in this form.
+              </p>
+            </form>
+          </div>
+
+          <div class="info">
+            <h3>Office details</h3>
+            <p><b>Phone:</b> <a href="tel:+15551234567">(555) 123-4567</a></p>
+            <p><b>Address:</b> 123 Main St, Your City, ST 12345</p>
+            <p><b>Hours:</b> Mon–Fri 8:00am–5:00pm</p>
+            <div class="hr" style="height:1px;background:var(--line);margin:14px 0;"></div>
+            <h3>Directions</h3>
+            <p class="muted">
+              Replace this with an embedded Google Map if you’d like, or link out to your listing.
+            </p>
+            <a class="btn" href="https://www.google.com/maps" target="_blank" rel="noreferrer">Open in Maps</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footerGrid">
+          <div>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div class="logo" aria-hidden="true" style="width:34px;height:34px;border-radius:12px;">
+                <span style="font-weight:900;color:#081225;">BS</span>
+              </div>
+              <div>
+                <div style="font-weight:800;">BrightSmile Dental</div>
+                <div class="muted">Family • Cosmetic • Emergency Dentistry</div>
+              </div>
+            </div>
+            <p class="muted" style="margin:12px 0 0;">
+              © <span id="year"></span> BrightSmile Dental. All rights reserved.
+            </p>
+          </div>
+          <div>
+            <div style="font-weight:800;margin-bottom:8px;">Quick links</div>
+            <div class="muted" style="display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="pill" href="#services">Services</a>
+              <a class="pill" href="#about">About</a>
+              <a class="pill" href="#insurance">Insurance</a>
+              <a class="pill" href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Simple UX: fake submit handler (replace with your backend)
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("apptForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      console.log("Appointment request (demo):", data);
+      alert("Thanks! Your request was captured (demo). Connect this form to your backend to receive submissions.");
+      e.target.reset();
+    });
+  </script>
+
+  <!-- ✅ YOUR WIDGET (embedded exactly as provided) -->
+  <div id="divicw" data-bind="E643D743-8140-42AE-8319-7B49AD2FCBBF" data-org="" data-guid="f054be7e-0249-4262-9760-2f4ef3cdced9"></div><script>var i={t:function(){try{var e=document.getElementById("divicw"),t=document.createElement("script");t.src="https://media.imi.chat/widget/js/imichatinit.js?t="+new Date().toISOString(),e.insertAdjacentElement("afterend",t),t.addEventListener("load",function(){console.log(new Date().toISOString(),"Livechat script loaded successfully!")}),t.addEventListener("error",function(){console.log(new Date().toISOString(),"Error loading Livechat script");i.o(e)})}catch(e){console.error(e)}},o:function(e){e.insertAdjacentHTML("afterend",'<iframe id="tls_al_frm" frameborder="0" style="overflow:hidden;height:208px;width:394px;position:fixed;display:block;right:48px;bottom:12px;z-index:99999;display:none;"></iframe>');var t=document.getElementById("tls_al_frm"),n=t.contentWindow,d=n.document;d.open();d.write("<!doctype html><html><head><meta charset='utf-8'><title>Untitled Document</title><style>body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#99a0b0;font-size:14px}.popover__content{background-color:#fbfbfe;padding:1.5rem;border-radius:5px;width:300px;box-shadow:0 2px 5px 0 rgba(0,0,0,0.26);position:relative}.popover__message{font-weight:600;color:#56627c;font-size:16px}.pull-left{float:left}.clearfix{clear:both}.hdr-txt{width:218px;margin-top:3px}.para-txt a{text-decoration:none;color:#005cde}.close-btn{position:absolute;right:15px;top:15px}.close-btn a{text-decoration:none;font-weight:400;color:#56627c;font-size:16px}</style></head><body><div class='popover__content'><div class='close-btn'><a href='#' onclick='closeTLSAlert()'>X</a></div><div class='popover__message'><div class='pull-left hdr-txt'>This browser version is not supported on LiveChat.</div></div><div class='clearfix'></div><p class='para-txt'>Please update your browser to the latest version and re-open the website to access the widget.</p></div><script>function closeTLSAlert(){window.parent.postMessage({key:'close_tls_alert',value:'close_tls_alert',action:'close_tls_alert'},'*');}<\/script></body></html>");d.close();t.style.display='block';window.addEventListener('message',function(e){'close_tls_alert'===e.data.action&&i.s()})},s:function(){var e=document.getElementById('tls_al_frm');e&&e.remove()}};i.t();</script>
+</body>
+</html>
